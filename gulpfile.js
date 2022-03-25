@@ -34,8 +34,7 @@ const buildHtml = () => {
   console.log('copy my html to build...');
 
   return src('src/index.html')
-    .pipe(dest('build/'))
-    .pipe(browserSync.stream());
+    .pipe(dest('build/'));
 };
 
 const buildFonts = () => {

@@ -28,6 +28,7 @@ body {
 }
 
 h1, h2, h3 {
+  margin: 0;
   font-family: Neucha, sans-serif;
   line-height: 1.2em;
 }
@@ -42,6 +43,62 @@ h2 {
 
 h3 {
   font-size: 34px;
+}
+
+.header {
+  position: relative;
+  padding: 100px 30px;
+  overflow: hidden;
+  background: #f5f4f0;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+}
+.header__title {
+  position: absolute;
+  top: 100px;
+  left: 160px;
+  z-index: 20;
+}
+.header__title--highlighted {
+  color: #fe8a02;
+}
+.header__image {
+  position: relative;
+  top: 55px;
+  right: -270px;
+  height: 525px;
+  margin-bottom: 30px;
+}
+.header__button {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #fe8a02;
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 30px;
+  margin-bottom: 50px;
+}
+.columns p {
+  margin: 0;
+}
+.columns p:nth-child(2) {
+  break-inside: avoid;
 }
 
 section {
