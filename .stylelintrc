@@ -1,5 +1,6 @@
 extends:
   - stylelint-config-standard-scss
+  - stylelint-config-prettier-scss
   - stylelint-config-rational-order
 
 plugins:
@@ -14,3 +15,4 @@ rules:
   at-rule-no-unknown: null
   scss/no-global-function-names: null
   scss/at-rule-no-unknown: true
+  selector-class-pattern: null
