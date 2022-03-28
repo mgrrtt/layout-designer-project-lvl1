@@ -1,0 +1,33 @@
+%title {
+  font-weight: normal;
+}
+
+%title--highlighted {
+  font-weight: normal;
+
+  color: $maincolor;
+}
+
+%text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+%columns {
+  margin-bottom: 50px;
+
+  column-count: 2;
+  column-gap: 30px;
+
+  & p {
+    margin: 0;
+
+    &:first-child {
+      break-after: column;
+    }
+
+    &:nth-child(2) {
+      break-inside: avoid;
+    }
+  }
+}

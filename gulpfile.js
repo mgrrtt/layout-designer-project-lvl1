@@ -2,6 +2,7 @@ const { src, dest, parallel, watch } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
+const gulpStylelint = require('gulp-stylelint');
 const browserSync = require('browser-sync').create();
 
 const browserSyncJob = () => {
@@ -26,6 +27,7 @@ const compileSass = () => {
   return src('src/styles/**/*.scss')
     .pipe(sass())
     .pipe(concat('style.css'))
+    .pipe(gulpStylelint({fix: true}))
     .pipe(dest('src/styles'))
     .pipe(browserSync.stream());
 };

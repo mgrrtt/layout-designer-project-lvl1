@@ -1,0 +1,63 @@
+.navigation {
+  background-color: $darkcolor;
+
+  &__cards {
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    list-style: none;
+  }
+
+  &__card {
+    flex: 0 0 350px;
+
+    max-width: 350px;
+    margin-bottom: 20px;
+
+    background-color: $lightcolor;
+
+    &--main {
+      background-color: $darkcolor;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    height: 100%;
+    padding: 24px;
+
+    text-decoration: none;
+
+    color: $darkcolor;
+  }
+
+  &__title {
+    @extend %title;
+
+    font-size: 52px;
+
+    color: $white;
+
+    &--highlighted {
+      @extend %title--highlighted;
+
+      margin-bottom: 16px;
+    }
+  }
+
+  &__order {
+    display: inline-block;
+
+    margin-bottom: 40px;
+
+    font-size: 64px;
+    line-height: 1em;
+    font-family: Neucha, sans-serif;
+  }
+}
